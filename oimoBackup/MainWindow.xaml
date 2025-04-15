@@ -1,0 +1,34 @@
+﻿<Window x:Class="oimoBackup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:oimoBackup"
+        mc:Ignorable="d"
+        Title="OimoBackUp" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="ExecuteBackupButton" Content="バックアップを実行する！" HorizontalAlignment="Left" Margin="578,173,0,0" VerticalAlignment="Top" Height="44" Width="185" Click="ExecuteBackupButton_Click"/>
+
+        <TextBox x:Name="SourcePathTextBox"
+             materialDesign:HintAssist.Hint="  バックアップ元のフォルダを選択"
+             HorizontalAlignment="Left" Margin="42,115,0,0" TextWrapping="Wrap"
+             VerticalAlignment="Top" Width="438" Height="30" IsReadOnly="True" materialDesign:TextFieldAssist.UnderlineBrush="Transparent" Background="#FFE0CFFF" BorderBrush="Transparent"/>
+        <Button x:Name="SelectSourceButton" Content="選択" HorizontalAlignment="Left" Margin="466,115,0,0" VerticalAlignment="Top" Height="30" Width="73" Click="SelectSourceButton_Click"/>
+
+        <TextBox x:Name="DestPathTextBox"
+             materialDesign:HintAssist.Hint="  バックアップを取る場所を選択"
+             HorizontalAlignment="Left" Margin="42,173,0,0" TextWrapping="Wrap"
+             VerticalAlignment="Top" Width="438" Height="30" IsReadOnly="True" materialDesign:TextFieldAssist.UnderlineBrush="Transparent" Background="#FFE0CFFF" BorderBrush="Transparent"/>
+        <Button x:Name="SelectDestButton" Content="選択" HorizontalAlignment="Left" Margin="466,173,0,0" VerticalAlignment="Top" Height="30" Width="73" Click="SelectDestButton_Click" />
+
+        <TextBox x:Name="LogTextBox"
+             materialDesign:HintAssist.Hint="Log"
+             HorizontalAlignment="Left" Margin="41,241,0,0" TextWrapping="Wrap"
+             VerticalAlignment="Top" Width="722" Height="149"
+             Background="#FFECECEC" IsReadOnly="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" materialDesign:TextFieldAssist.UnderlineBrush="Transparent" BorderBrush="Transparent"/>
+        <TextBlock HorizontalAlignment="Left" Margin="42,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Height="45" Text="OimoBackUp" FontFamily="Segoe UI Black" Width="157"  />
+        <TextBlock HorizontalAlignment="Left" Margin="245,152,0,0" TextWrapping="Wrap" Text="↓" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="42,73,0,0" TextWrapping="Wrap" Text="指定したフォルダにファイルをコピーします。すでにあるファイルは上書きします。" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
